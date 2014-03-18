@@ -22,21 +22,48 @@ if ( !defined('EQDKP_INC') ){
 
 if(!class_exists('eveonline')) {
 	class eveonline extends game_generic {
-		public static $shortcuts = array();
+		public $version			= '0.1.1';
 		protected $this_game	= 'eveonline';
-		protected $types		= array('classes', 'races', 'factions', 'filters');
-		public $icons			= array('classes', 'classes_big', 'races', 'events');
+		protected $types		= array('classes', 'factions', 'filters');
 		protected $classes		= array();
 		protected $races		= array();
 		protected $factions		= array();
 		protected $filters		= array();
 		public $langs			= array('english', 'german');
 
+		protected $class_dependencies = array(
+			array(
+				'name'		=> 'faction',
+				'type'		=> 'factions',
+				'admin' 	=> true,
+				'decorate'	=> false,
+				'parent'	=> false,
+			),
+			array(
+				'name'		=> 'class',
+				'type'		=> 'classes',
+				'admin'		=> false,
+				'decorate'	=> true,
+				'primary'	=> true,
+				'colorize'	=> true,
+				'roster'	=> true,
+				'recruitment' => true,
+				'parent'	=> false
+			),
+		);
+		
+		protected $class_colors = array(
+			1	=> '#cd5c5c',
+			2	=> '#ffd700',
+			3	=> '#7fff00',
+			4	=> '#7fffd4',
+			5	=> '#228b22'
+		);
+
 		protected $glang		= array();
 		protected $lang_file	= array();
 		protected $path			= false;
 		public $lang			= false;
-		public $version			= '0.1.1';
 
 		/**
 		* Initialises filters
@@ -56,14 +83,6 @@ if(!class_exists('eveonline')) {
 			}
 		}
 		public function get_OnChangeInfos($install=false){
-			//classcolors
-			$info['class_color'] = array(
-				1      	=> '#cd5c5c',
-				2    	=> '#ffd700',
-				3     	=> '#7fff00',
-				4    	=> '#7fffd4',
-				5     	=> '#228b22'
-			);
 			$info['aq'] = array();
 
 			//Do this SQL Query NOT if the Eqdkp is installed -> only @ the first install
@@ -73,5 +92,4 @@ if(!class_exists('eveonline')) {
 		}
 	}
 }
-if(version_compare(PHP_VERSION, '5.3.0', '<')) registry::add_const('short_eveonline', eveonline::$shortcuts);
 ?>

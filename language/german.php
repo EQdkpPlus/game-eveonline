@@ -12,19 +12,14 @@ $german_array =  array(
 		4	=> 'Resource',
 		5	=> 'Services'
 	),
-
-	'races' => array(
-		'Unknown',
-		'Standard'
-	),
 	'factions' => array(
-		'Amarr',
-		'Caldari',
-		'Gallente',
-		'Minmatar'
+		0	=> 'Amarr',
+		1	=> 'Caldari',
+		2	=> 'Gallente',
+		3	=> 'Minmatar'
 	),
 	'lang' => array(
-		'eveonline' => 'EVE Online',
+		'eveonline'				=> 'EVE Online',
 	),
 );
 
