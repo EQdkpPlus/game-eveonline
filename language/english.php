@@ -19,7 +19,11 @@ $english_array =  array(
 		3	=> 'Minmatar'
 	),
 	'lang' => array(
-		'eveonline'				=> 'EVE Online',
+		'eveonline'					=> 'EVE Online',
+		'core_sett_fs_gamesettings'	=> 'EVE Online Settings',
+		'uc_faction'				=> 'Faction',
+		'uc_class'					=> 'Class',
+		'uc_faction_help'			=> 'Select the default faction',
 	),
 );
 

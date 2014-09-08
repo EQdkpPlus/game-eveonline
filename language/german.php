@@ -20,6 +20,13 @@ $german_array =  array(
 	),
 	'lang' => array(
 		'eveonline'				=> 'EVE Online',
+		'uc_faction'			=> 'Fraktion',
+		'uc_class'				=> 'Klasse',
+
+		// Admin Settings
+		'core_sett_fs_gamesettings'	=> 'EVE Online Settings',
+		'uc_faction'				=> 'Fraktion',
+		'uc_faction_help'			=> 'Wähle deine Standard-Fraktion',
 	),
 );
 
