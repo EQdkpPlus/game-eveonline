@@ -26,7 +26,7 @@ if ( !defined('EQDKP_INC') ){
 if(!class_exists('eveonline')) {
 	class eveonline extends game_generic {
 		protected static $apiLevel	= 20;
-		public $version				= '0.1.1';
+		public $version				= '1.0.0';
 		protected $this_game		= 'eveonline';
 		protected $types			= array('classes', 'factions', 'filters');
 		protected $classes			= array();
